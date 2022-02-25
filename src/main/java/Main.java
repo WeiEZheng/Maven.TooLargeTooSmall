@@ -10,8 +10,7 @@ public class Main {
         Scanner scan = new Scanner(System.in);
         Random random = new Random();
         int count=0, guess, previousguess=-1, number = random.nextInt(0,10);
-        boolean correct = false;
-        while (correct==false){
+        while (true){
             System.out.println("Enter a guess (from 0 to 10):");
             guess = scan.nextInt();
             if (guess == previousguess) {
@@ -21,7 +20,7 @@ public class Main {
             else if (guess == number){
                 count++;
                 System.out.println("Congratulation! You guessed the number in " + count +" tries.");
-                correct=true;
+                break;
             }
             else if (guess < number){
                 System.out.println("Your guess is too small.");
