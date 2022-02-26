@@ -20,6 +20,7 @@ public class Main {
             else if (guess == number){
                 count++;
                 System.out.println("Congratulation! You guessed the number in " + count +" tries.");
+                scan.close();
                 break;
             }
             else if (guess < number){
